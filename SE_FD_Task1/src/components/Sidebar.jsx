@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { useEffect, useState } from 'react';
+
+
 function Sidebar({isOpen,onClose}) {
         const [activeSection, setActiveSection] = useState('');
     
@@ -39,10 +41,9 @@ function Sidebar({isOpen,onClose}) {
     
     return (
         <>
-                <div className={`fixed inset-0 bg-black z-20  ${isOpen? 'opacity-70':'opacity-0 pointer-events-none'} `} onClick={onClose} />
+                <div className={`fixed inset-0 bg-black z-40  ${isOpen? 'opacity-70':'opacity-0 pointer-events-none'} `} onClick={onClose} />
                 
-                <div className={`fixed bg-black text-white z-20 top-0 left-0 w-64 h-full transform transition-transform duration-300 ${isOpen? 'translate-x-0':'-translate-x-full'}`} >
-                    <div className="name text-white  text-2xl font-bold px-10 py-4"><a href="/">Jhon</a></div>
+                <div className={`fixed bg-black text-white z-40  left-0 w-64 h-full transform transition-transform duration-300 ${isOpen? 'translate-x-0':'-translate-x-full'}`} >
                     <div className=' flex flex-col px-8 py-4  space-y-4'>
                         <a href='#about' onClick={onClose}  className={getLinkClass('about')} >About</a>
                         <a href='#education' onClick={onClose}  className={getLinkClass('education')} >Education</a>
