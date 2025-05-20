@@ -20,15 +20,7 @@ function App() {
       { threshold: 0.3 }
     );
 
-    if (skillsRef.current) {
-      observer.observe(skillsRef.current);
-    }
-
-    return () => {
-      if (skillsRef.current) {
-        observer.unobserve(skillsRef.current);
-      }
-    };
+    
   }, []);
 
   const data = [
@@ -107,9 +99,9 @@ function App() {
 
       <Navbar />
 
-      <main className='bg-gray-50 ' >
+      <main className='bg-black ' >
 
-        <section id='home' className="bg-[url(./src/assets/sunset.jpg)] bg-right-bottom lg:bg-cover h-screen bg-no-repeat border-gray-400 border-b-2">
+        <section id='home' className="bg-[url(./src/assets/sunset.jpg)] bg-right-bottom lg:bg-cover h-screen bg-no-repeat border-gray-400 border-b-2 ">
           <div className='absolute bg-black opacity-10 sm:opacity-70 w-full sm:mask-b-from-20 h-screen'></div>
           <div className='relative h-screen flex flex-col justify-center items-center'>
 
@@ -162,7 +154,7 @@ function App() {
           </div>
         </section>
 
-        <section id="education" className="scroll-mt-8 pt-8 pb-16 bg-blue-50 border-b-2 border-gray-300 px-10">
+        <section id="education" className="scroll-mt-8 pt-8 pb-16 bg-blue-50 border-b-2 border-gray-300 px-10 ">
           <h2 className="text-center text-gray-800 text-3xl md:text-4xl font-bold mb-12 underline underline-offset-8">
             Education
           </h2>
@@ -187,7 +179,7 @@ function App() {
           </div>
         </section>
 
-        <section id="skills" ref={skillsRef} className="scroll-mt-8 pt-8 pb-16 md:py-10 md:pt-16 bg-gray-50 border-b-2 border-gray-400">
+        <section id="skills" ref={skillsRef} className="scroll-mt-8 pt-8 pb-16 md:py-10 md:pt-16 bg-gray-50 border-b-2 border-gray-400 px-4 ">
           <h2 className="text-center text-gray-800 text-2xl md:text-3xl font-bold mb-6 md:mb-12 underline underline-offset-8">Skills</h2>
 
           <div className="container md:grid grid-cols-2 gap-x-24 sm:px-16 px-16 py-8 mx-auto">
@@ -330,3 +322,12 @@ function App() {
 
 export default App;
 
+// if (skillsRef.current) {
+//       observer.observe(skillsRef.current);
+//     }
+
+//     return () => {
+//       if (skillsRef.current) {
+//         observer.unobserve(skillsRef.current);
+//       }
+//     };

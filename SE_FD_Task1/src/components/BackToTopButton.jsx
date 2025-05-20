@@ -26,7 +26,7 @@ const BackToTopButton = () => {
     isVisible && (
       <button
         onClick={scrollToTop}
-        className="fixed sm:bottom-6 sm:right-6 sm:h-12 sm:w-12 sm:p-3.5 bottom-8 right-6 h-10 w-10 p-2    bg-blue-500  text-white  rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 z-30"
+        className="fixed  sm:right-8 sm:h-10 sm:w-10 sm:p-2.5 bottom-8 right-4 h-8 w-8 p-2    bg-blue-500  text-white  rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 z-30"
         aria-label="Back to Top"
       >
         <img src="src/assets/arrow-up.svg" alt="up_arrow" className='animate-bounce' />
